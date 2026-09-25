@@ -1,0 +1,43 @@
+{
+  "targets": {
+    "default": {
+      "resources": {
+        "runtimes": {
+          "ai_fwd2": {
+            "runtimeId": "MegaBrainsDeployV2_ai_fwd2-oURrYaDzia",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_fwd2-oURrYaDzia",
+            "roleArn": "arn:aws:iam::626635402343:role/AgentCore-MegaBrainsDeplo-ApplicationAgentAiFwd2Run-yBGVta2LkJK5"
+          },
+          "ai_fwd1": {
+            "runtimeId": "MegaBrainsDeployV2_ai_fwd1-FTGP9zBjZj",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_fwd1-FTGP9zBjZj",
+            "roleArn": "arn:aws:iam::626635402343:role/AgentCore-MegaBrainsDeplo-ApplicationAgentAiFwd1Run-pzgpS6UURSpf"
+          },
+          "ai_def": {
+            "runtimeId": "MegaBrainsDeployV2_ai_def-HSacqK6sPV",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_def-HSacqK6sPV",
+            "roleArn": "arn:aws:iam::626635402343:role/AgentCore-MegaBrainsDeplo-ApplicationAgentAiDefRunt-7sAbhNZ54TDk"
+          },
+          "ai_mid": {
+            "runtimeId": "MegaBrainsDeployV2_ai_mid-f28weqH9rk",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_mid-f28weqH9rk",
+            "roleArn": "arn:aws:iam::626635402343:role/AgentCore-MegaBrainsDeplo-ApplicationAgentAiMidRunt-ZIbEZ85EZjDo"
+          },
+          "ai_gk": {
+            "runtimeId": "MegaBrainsDeployV2_ai_gk-IHPh4O2zQd",
+            "runtimeArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_gk-IHPh4O2zQd",
+            "roleArn": "arn:aws:iam::626635402343:role/AgentCore-MegaBrainsDeplo-ApplicationAgentAiGkRunti-98HkN3udYuZ8"
+          }
+        },
+        "memories": {
+          "team_memory": {
+            "memoryId": "MegaBrainsDeployV2_team_memory-AvssDj8ISH",
+            "memoryArn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:memory/MegaBrainsDeployV2_team_memory-AvssDj8ISH"
+          }
+        },
+        "stackName": "AgentCore-MegaBrainsDeployV2-default",
+        "deployHash": "6be05526cb18afcb"
+      }
+    }
+  }
+}

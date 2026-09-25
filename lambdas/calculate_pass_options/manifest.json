@@ -1,0 +1,87 @@
+{
+    "inputSchema":  {
+                        "properties":  {
+                                           "opponents":  {
+                                                             "items":  {
+                                                                           "properties":  {
+                                                                                              "position":  {
+                                                                                                               "properties":  {
+                                                                                                                                  "y":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        },
+                                                                                                                                  "x":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        }
+                                                                                                                              },
+                                                                                                               "type":  "object",
+                                                                                                               "required":  [
+                                                                                                                                "x",
+                                                                                                                                "y"
+                                                                                                                            ]
+                                                                                                           },
+                                                                                              "agentId":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                          },
+                                                                           "type":  "object",
+                                                                           "required":  [
+                                                                                            "position"
+                                                                                        ]
+                                                                       },
+                                                             "type":  "array"
+                                                         },
+                                           "my_position":  {
+                                                               "properties":  {
+                                                                                  "y":  {
+                                                                                            "type":  "number"
+                                                                                        },
+                                                                                  "x":  {
+                                                                                            "type":  "number"
+                                                                                        }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "x",
+                                                                                "y"
+                                                                            ]
+                                                           },
+                                           "teammates":  {
+                                                             "items":  {
+                                                                           "properties":  {
+                                                                                              "position":  {
+                                                                                                               "properties":  {
+                                                                                                                                  "y":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        },
+                                                                                                                                  "x":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        }
+                                                                                                                              },
+                                                                                                               "type":  "object",
+                                                                                                               "required":  [
+                                                                                                                                "x",
+                                                                                                                                "y"
+                                                                                                                            ]
+                                                                                                           },
+                                                                                              "agentId":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                          },
+                                                                           "type":  "object",
+                                                                           "required":  [
+                                                                                            "position"
+                                                                                        ]
+                                                                       },
+                                                             "type":  "array"
+                                                         }
+                                       },
+                        "type":  "object",
+                        "required":  [
+                                         "my_position",
+                                         "teammates",
+                                         "opponents"
+                                     ]
+                    },
+    "description":  "Estimate pass success probability for each teammate given current positions. Returns ranked list of pass options.",
+    "name":  "calculate_pass_options"
+}

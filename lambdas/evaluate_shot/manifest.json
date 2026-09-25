@@ -1,0 +1,72 @@
+{
+    "inputSchema":  {
+                        "properties":  {
+                                           "opponents":  {
+                                                             "items":  {
+                                                                           "properties":  {
+                                                                                              "position":  {
+                                                                                                               "properties":  {
+                                                                                                                                  "y":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        },
+                                                                                                                                  "x":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        }
+                                                                                                                              },
+                                                                                                               "type":  "object",
+                                                                                                               "required":  [
+                                                                                                                                "x",
+                                                                                                                                "y"
+                                                                                                                            ]
+                                                                                                           },
+                                                                                              "agentId":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                          },
+                                                                           "type":  "object",
+                                                                           "required":  [
+                                                                                            "position"
+                                                                                        ]
+                                                                       },
+                                                             "type":  "array"
+                                                         },
+                                           "my_position":  {
+                                                               "properties":  {
+                                                                                  "y":  {
+                                                                                            "type":  "number"
+                                                                                        },
+                                                                                  "x":  {
+                                                                                            "type":  "number"
+                                                                                        }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "x",
+                                                                                "y"
+                                                                            ]
+                                                           },
+                                           "opp_gk_position":  {
+                                                                   "properties":  {
+                                                                                      "y":  {
+                                                                                                "type":  "number"
+                                                                                            },
+                                                                                      "x":  {
+                                                                                                "type":  "number"
+                                                                                            }
+                                                                                  },
+                                                                   "type":  "object",
+                                                                   "required":  [
+                                                                                    "x",
+                                                                                    "y"
+                                                                                ]
+                                                               }
+                                       },
+                        "type":  "object",
+                        "required":  [
+                                         "my_position",
+                                         "opp_gk_position"
+                                     ]
+                    },
+    "description":  "Estimate shot success probability from current position and recommend aim point (LEFT/RIGHT/CENTER + target_y).",
+    "name":  "evaluate_shot"
+}

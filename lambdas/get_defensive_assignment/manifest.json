@@ -1,0 +1,72 @@
+{
+    "inputSchema":  {
+                        "properties":  {
+                                           "ball_position":  {
+                                                                 "properties":  {
+                                                                                    "y":  {
+                                                                                              "type":  "number"
+                                                                                          },
+                                                                                    "x":  {
+                                                                                              "type":  "number"
+                                                                                          }
+                                                                                },
+                                                                 "type":  "object",
+                                                                 "required":  [
+                                                                                  "x",
+                                                                                  "y"
+                                                                              ]
+                                                             },
+                                           "my_position":  {
+                                                               "properties":  {
+                                                                                  "y":  {
+                                                                                            "type":  "number"
+                                                                                        },
+                                                                                  "x":  {
+                                                                                            "type":  "number"
+                                                                                        }
+                                                                              },
+                                                               "type":  "object",
+                                                               "required":  [
+                                                                                "x",
+                                                                                "y"
+                                                                            ]
+                                                           },
+                                           "opponents":  {
+                                                             "items":  {
+                                                                           "properties":  {
+                                                                                              "position":  {
+                                                                                                               "properties":  {
+                                                                                                                                  "y":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        },
+                                                                                                                                  "x":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        }
+                                                                                                                              },
+                                                                                                               "type":  "object",
+                                                                                                               "required":  [
+                                                                                                                                "x",
+                                                                                                                                "y"
+                                                                                                                            ]
+                                                                                                           },
+                                                                                              "agentId":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                          },
+                                                                           "type":  "object",
+                                                                           "required":  [
+                                                                                            "position"
+                                                                                        ]
+                                                                       },
+                                                             "type":  "array"
+                                                         }
+                                       },
+                        "type":  "object",
+                        "required":  [
+                                         "opponents",
+                                         "ball_position"
+                                     ]
+                    },
+    "description":  "Rank opponents by threat level to prioritize marking or interception.",
+    "name":  "get_defensive_assignment"
+}

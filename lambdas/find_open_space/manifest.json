@@ -1,0 +1,65 @@
+{
+    "inputSchema":  {
+                        "properties":  {
+                                           "current_position":  {
+                                                                    "properties":  {
+                                                                                       "y":  {
+                                                                                                 "type":  "number"
+                                                                                             },
+                                                                                       "x":  {
+                                                                                                 "type":  "number"
+                                                                                             }
+                                                                                   },
+                                                                    "type":  "object",
+                                                                    "required":  [
+                                                                                     "x",
+                                                                                     "y"
+                                                                                 ]
+                                                                },
+                                           "zone":  {
+                                                        "type":  "string",
+                                                        "enum":  [
+                                                                     "attack",
+                                                                     "midfield",
+                                                                     "defense"
+                                                                 ]
+                                                    },
+                                           "opponents":  {
+                                                             "items":  {
+                                                                           "properties":  {
+                                                                                              "position":  {
+                                                                                                               "properties":  {
+                                                                                                                                  "y":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        },
+                                                                                                                                  "x":  {
+                                                                                                                                            "type":  "number"
+                                                                                                                                        }
+                                                                                                                              },
+                                                                                                               "type":  "object",
+                                                                                                               "required":  [
+                                                                                                                                "x",
+                                                                                                                                "y"
+                                                                                                                            ]
+                                                                                                           },
+                                                                                              "agentId":  {
+                                                                                                              "type":  "string"
+                                                                                                          }
+                                                                                          },
+                                                                           "type":  "object",
+                                                                           "required":  [
+                                                                                            "position"
+                                                                                        ]
+                                                                       },
+                                                             "type":  "array"
+                                                         }
+                                       },
+                        "type":  "object",
+                        "required":  [
+                                         "zone",
+                                         "opponents"
+                                     ]
+                    },
+    "description":  "Find the grid cell within a zone with maximum clearance from opponents. Useful for off-ball repositioning.",
+    "name":  "find_open_space"
+}

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://schema.agentcore.aws.dev/v1/agentcore.json",
+  "name": "MegaBrainsDeployV2",
+  "version": 1,
+  "managedBy": "CDK",
+  "tags": {
+    "agentcore:created-by": "agentcore-cli",
+    "agentcore:project-name": "MegaBrainsDeployV2"
+  },
+  "runtimes": [
+    {
+      "name": "ai_gk",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/ai_gk/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    },
+    {
+      "name": "ai_def",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/ai_def/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    },
+    {
+      "name": "ai_mid",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/ai_mid/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    },
+    {
+      "name": "ai_fwd1",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/ai_fwd1/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    },
+    {
+      "name": "ai_fwd2",
+      "build": "CodeZip",
+      "entrypoint": "main.py",
+      "codeLocation": "app/ai_fwd2/",
+      "runtimeVersion": "PYTHON_3_14",
+      "networkMode": "PUBLIC",
+      "protocol": "HTTP"
+    }
+  ],
+  "memories": [
+    {
+      "name": "team_memory",
+      "eventExpiryDuration": 7,
+      "strategies": []
+    }
+  ],
+  "knowledgeBases": [],
+  "credentials": [],
+  "evaluators": [],
+  "onlineEvalConfigs": [],
+  "agentCoreGateways": [
+    {
+      "name": "tactical-tools",
+      "protocolType": "MCP",
+      "description": "Gateway for tactical analysis tools",
+      "targets": [],
+      "authorizerType": "NONE",
+      "enableSemanticSearch": true,
+      "exceptionLevel": "NONE"
+    }
+  ],
+  "policyEngines": [],
+  "configBundles": [],
+  "abTests": [],
+  "harnesses": [],
+  "datasets": [],
+  "capacityProviders": [],
+  "payments": []
+}

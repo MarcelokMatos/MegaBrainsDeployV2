@@ -1,0 +1,36 @@
+{
+  "team": "MegaBrainsFC",
+  "version": "V2",
+  "teamCode": "8635196ED23955B8314369BCB45407F0",
+  "region": "us-east-1",
+  "account": "626635402343",
+  "stackName": "AgentCore-MegaBrainsDeployV2-default",
+  "notes": "V2: invalid game commands (TACKLE/THROUGH_BALL/CROSS/CLEAR/DRIBBLE) replaced with valid ones (PRESS_BALL/PASS/CLEAR_OVERRIDE/MOVE_TO). GK safety rails clamp X [-50,-40] and Y [-5,+5]. load.py tuned with max_tokens=200, temperature=0.2.",
+  "agents": {
+    "gk": {
+      "playerId": 0,
+      "role": "Goalkeeper",
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_gk-IHPh4O2zQd"
+    },
+    "def": {
+      "playerId": 1,
+      "role": "Defender",
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_def-HSacqK6sPV"
+    },
+    "mid": {
+      "playerId": 2,
+      "role": "Midfielder",
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_mid-f28weqH9rk"
+    },
+    "fwd1": {
+      "playerId": 3,
+      "role": "Left Forward",
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_fwd1-FTGP9zBjZj"
+    },
+    "fwd2": {
+      "playerId": 4,
+      "role": "Right Forward",
+      "arn": "arn:aws:bedrock-agentcore:us-east-1:626635402343:runtime/MegaBrainsDeployV2_ai_fwd2-oURrYaDzia"
+    }
+  }
+}
